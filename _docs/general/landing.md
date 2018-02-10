@@ -101,7 +101,7 @@ order:
 
 ## Подключение форм
 
-Если в форме требуется упомянуть скайп, а не телефон, должно быть: <input id="input-phone" required="required" name="skype" type="text" class="form-control" placeholder="">
+Если в форме требуется упомянуть скайп, а не телефон, должно быть: &lt;input id="input-phone" required="required" name="skype" type="text" class="form-control" placeholder=""&gt;
 
 Если используется форма activecampaign, то должны быть файлы ok.html (пожалуйста подтвердите подписку) и confirmed.html (спасибо)
 
@@ -119,7 +119,13 @@ order:
 
 Открывается после того, как лид внес оплату.
 
-paid – это «спасибо за покупку», указывается тут: {% include yandex-pay.html name="Как создать мощное предложение" amount="67" redirect="http://icoach.io/tw-paid/" %} в поле redirect
+paid – это «спасибо за покупку», указывается тут в поле redirect:
+
+{% raw %}
+~~~
+{% include yandex-pay.html name="Как создать мощное предложение" amount="67" redirect="http://icoach.io/tw-paid/" %}
+~~~
+{% endraw %}
 
 ## Facebook Pixel
 
